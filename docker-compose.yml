@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+    mysql:
+      image: mysql:latest
+      #platform: linux/x86_64
+      container_name: sequelize-node
+      restart: always
+      ports:
+        - 3307:3306
+      expose:
+        - 3307
+      environment:
+        - MYSQL_ROOT_PASSWORD=test
+        - MYSQL_DATABASE=sequelize-node
